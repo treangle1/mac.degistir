@@ -17,20 +17,20 @@ print("""
 """)
 islemno = input("İşlem No Girin : ")
 if(islemno=="1"):
-    os.system("ifconfih eth0 down")
+    os.system("ifconfig eth0 down")
     os.system("macchanger -r eth0")
     os.system("ifconfig eth up")
     print("\033[92mYeni MAC Adresi Random Belirlendi...")
 
 if(islemno=="2"):
     macadres = input("Yeni Mac Adresi Girin : ")
-    os.system("ifconfih eth0 down")
+    os.system("ifconfig eth0 down")
     os.system("macchanger --mac " + macadres + "eth0")
     os.system("ifconfig eth up")
     print("\033[92mYeni MAC Adresiniz Belirlendi...")
 
 if(islemno=="3"):
-    os.system("ifconfih eth0 down")
+    os.system("ifconfig eth0 down")
     os.system("macchanger _p eth0")
     os.system("ifconfig eth0 up")
     print("\033[92mYeni MAC Adresiniz Orjinal Hale Döndürüldü...")
